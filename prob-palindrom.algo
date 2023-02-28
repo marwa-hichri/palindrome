@@ -1,0 +1,22 @@
+FUNCTION palindrome-recur(CHAR mot[]) : BOOLEAN
+VAR
+b:BOOLEAN;
+n:INTEGER;
+
+
+BEGIN
+FOR i FROM 1 TO n/2 STEP 1  DO
+     IF (n=0 or n=1) THEN
+        RETURN (b=true)
+    ELSE
+        IF (mot[0]=mot[(n-1)] ) THEN
+             palindrome-recur(mot +1,n-2)
+             b=true;
+        ELSE
+            b=false;
+        END_IF
+    END_IF
+     
+END_FOR
+   
+END
